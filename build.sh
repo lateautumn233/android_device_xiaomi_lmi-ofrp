@@ -1,4 +1,4 @@
-apt install git aria2 rsync curl sudo wget zstd -y
+apt install git aria2 rsync curl sudo wget zstd openjdk-8-jdk -y
 
 
 echo "Download the source code"
