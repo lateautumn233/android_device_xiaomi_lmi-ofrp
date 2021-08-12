@@ -25,7 +25,7 @@ Redmi k30S Ultra was announced and released in February 2020.
 
 ## Device picture
 
-![Redmi k30S Ultra](https://attach.bbs.miui.com/common/0c/common_369_phone.png)
+![Redmi k30S Ultra](pictures/apollo.png)
 
 ## Features
 
