@@ -1,5 +1,5 @@
 cc_library_static {
-    name: "libinit_lmi",
+    name: "libinit_apollo",
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
@@ -7,6 +7,6 @@ cc_library_static {
     cflags: [
         "-Wall",
     ],
-    srcs: ["init_lmi.cpp"],
+    srcs: ["init_apollo.cpp"],
     recovery_available: true,
 }

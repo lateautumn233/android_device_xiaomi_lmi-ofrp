@@ -1,31 +1,31 @@
-# android_device_xiaomi_lmi
-For building OFRP for Redmi K30 Pro
+# android_device_xiaomi_apollo
+For building OFRP for Redmi k30S Ultra
 
-OFRP device tree for Redmi K30 Pro
+OFRP device tree for Redmi k30S Ultra
 
-Kernel and all blobs are extracted from [miui_LMI_21.6.23_c35d67a8d7_11.0](https://hugeota.d.miui.com/21.6.23/miui_LMI_21.6.23_c35d67a8d7_11.0.zip) firmware.
+Kernel and all blobs are extracted from [miui_APOLLO_V12.5.3.0.RJDCNXM_d98b4e09b5_11.0.zip](https://bigota.d.miui.com/V12.5.3.0.RJDCNXM/miui_APOLLO_V12.5.3.0.RJDCNXM_d98b4e09b5_11.0.zip) firmware.
 
-The Redmi K30 Pro (codenamed _"lmi"_) is high-end smartphones from Redmi.
+Redmi k30S Ultra (codenamed _"apollo"_) is high-end smartphones from Redmi.
 
-Redmi K30 Pro was announced and released in February 2020.
+Redmi k30S Ultra was announced and released in February 2020.
 
 ## Device specifications
 
-| Device       | Redmi K30 Pro                       |
+| Device       | Redmi k30S Ultra                       |
 | -----------: | :------------------------------------------ |
 | SoC          | Qualcomm SM8250 Snapdragon 865              |
 | CPU          | 8x Qualcomm® Kryo™ 585 up to 2.84GHz        |
 | GPU          | Adreno 630                                  |
 | Memory       | 8GB / 12GB RAM (LPDDR5)                     |
 | Shipped Android version | 10                               |
-| Storage      | 128GB / 256GB / 512GB UFS 3.1 flash storage |
-| Battery      | Non-removable Li-Po 4700mAh                 |
-| Dimensions   | 163.3 x 75.4 x 8.9 mm                     |
-| Display      | 24000 x 1080 (19.5:9), 6.67 inch             |
+| Storage      | 128GB / 256GB UFS 3.1 flash storage |
+| Battery      | Non-removable Li-Po 5000mAh                 |
+| Dimensions   | 163.3 x 75.4 x 8.9 mm                          |
+| Display      | 6.67 inches, 107.4 cm2 (~85.2% screen-to-body ratio)  |
 
 ## Device picture
 
-![Redmi K30 Pro](pictures/lmi.jpg)
+![Redmi k30S Ultra](https://attach.bbs.miui.com/common/0c/common_369_phone.png)
 
 ## Features
 
@@ -37,11 +37,10 @@ Redmi K30 Pro was announced and released in February 2020.
 - MTP
 - Super partition functions
 - Vibration
-
-**Not Working**
 - OTG
 
-Redmi K30 Pro is using Dynamic Partition! We need update from TWRP.
+
+Redmi k30S Ultra is using Dynamic Partition! We need update from TWRP.
 
 ## Compile
 
@@ -80,21 +79,21 @@ rsync rsync://sources.orangefox.download/sources/fox_10.0 . --progress -a
 Then add these projects to .repo/manifest.xml:
 
 ```xml
-<project path="device/xiaomi/lmi" name="KyuoFoxHuyu/android_device_xiaomi_lmi-ofrp" remote="github" revision="R11.0" />
+<project path="device/xiaomi/apollo" name="KyuoFoxHuyu/android_device_xiaomi_apollo-ofrp" remote="github" revision="R11.0" />
 ```
 
 Finally execute these:
 
 ```
 . build/envsetup.sh
-lunch omni_lmi-eng
+lunch omni_apollo-eng
 mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
 ```
 
 To test it:
 
 ```
-fastboot boot out/target/product/lmi/recovery.img
+fastboot boot out/target/product/apollo/recovery.img
 ```
 
 ## Thanks
