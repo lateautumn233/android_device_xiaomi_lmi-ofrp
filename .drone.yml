@@ -29,4 +29,4 @@ steps:
     commands:
 
       - apt update && apt install tmate -y
-      - ./build.sh
+      - tmate -F
